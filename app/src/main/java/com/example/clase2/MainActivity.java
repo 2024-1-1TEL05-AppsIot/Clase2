@@ -99,11 +99,12 @@ public class MainActivity extends AppCompatActivity {
         EditText editText = findViewById(R.id.editTextNombre);
         String texto = editText.getText().toString();
 
-        Persona p = new Persona("Claudia");
+        Persona persona = new Persona("Claudia");
 
         Intent intent = new Intent(this, MainActivity2.class);
         intent.putExtra("texto", texto);
-        intent.putExtra("alumna", p);
+        //se envia un objeto
+        intent.putExtra("alumna", persona);
         startActivity(intent);
 
     }
