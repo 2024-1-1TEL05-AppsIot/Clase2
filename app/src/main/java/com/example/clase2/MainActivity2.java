@@ -20,7 +20,7 @@ public class MainActivity2 extends AppCompatActivity {
         Persona persona = (Persona) intent1.getSerializableExtra("alumna");
 
         TextView textView = findViewById(R.id.textView2);
-        textView.setText("persona: " + persona.getNombre() + " | texto: " + texto);
+        textView.setText("texto: " + texto + " | persona: " + persona.getNombre());
 
         Button button = findViewById(R.id.buttonRegresar);
         button.setOnClickListener(view -> {
