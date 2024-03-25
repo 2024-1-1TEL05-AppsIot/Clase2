@@ -6,12 +6,15 @@
         android:id="@+id/wifi"
         android:icon="@drawable/baseline_wifi_24"
         android:title="wifi"
-        android:onClick="wifiBtn"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/add"
         android:icon="@drawable/baseline_add_24"
         android:title="Agregar"
-        android:onClick="addBtn"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/notify"
+        android:icon="@drawable/baseline_notifications_24"
+        android:title="Notificacion"
         app:showAsAction="ifRoom" />
 </menu>
