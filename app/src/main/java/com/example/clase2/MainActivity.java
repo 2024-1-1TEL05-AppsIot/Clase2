@@ -59,26 +59,32 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    /*@Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()){
-            case R.id.wifi:
-                break;
-            case R.id.add:
-                break;
+        int itemId = item.getItemId();
+        if (itemId == R.id.wifi) {
+            Toast.makeText(this, "btn wifi presionado", Toast.LENGTH_SHORT).show();
+        } else if (itemId == R.id.add) {
+            Toast.makeText(this, "btn add presionado", Toast.LENGTH_SHORT).show();
+        } else if (itemId == R.id.notify) {
+            Toast.makeText(this, "btn notify presionado", Toast.LENGTH_SHORT).show();
         }
 
         return super.onOptionsItemSelected(item);
-    }*/
+    }
 
-    public void wifiBtn(MenuItem menuItem){
+    /*public void wifiBtn(MenuItem menuItem){
         Toast.makeText(this, "btn wifi presionado", Toast.LENGTH_SHORT).show();
     }
 
     public void addBtn(MenuItem menuItem){
-        Toast.makeText(this, "btn ADD presionado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "btn add presionado", Toast.LENGTH_SHORT).show();
     }
+
+    public void notifyBtn(MenuItem menuItem){
+        Toast.makeText(this, "btn notify presionado", Toast.LENGTH_SHORT).show();
+    }*/
 
     @Override
     protected void onStart() {
