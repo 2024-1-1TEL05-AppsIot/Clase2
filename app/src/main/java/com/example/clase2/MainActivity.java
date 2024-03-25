@@ -107,6 +107,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /*
+        El callback (lo que ejecutará al regreso)
+     */
     ActivityResultLauncher<Intent> launcher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
