@@ -29,14 +29,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d(TAG, "oncreate");
 
-        Button button = findViewById(R.id.button2);
+        /*Button button = findViewById(R.id.button2);
         button.setOnClickListener(view -> {
             TextView textView = findViewById(R.id.contadorEnVista);
             String contadorStr = textView.getText().toString();
             int contador = Integer.parseInt(contadorStr);
             textView.setText(String.valueOf(++contador));
 
-        });
+        });*/
 
         Button button3 = findViewById(R.id.button3);
         button3.setOnClickListener(view -> {
@@ -44,6 +44,15 @@ public class MainActivity extends AppCompatActivity {
             launcher.launch(intent);
         });
 
+    }
+
+    public void incrementarContador (View view) {
+        TextView textView = findViewById(R.id.contadorEnVista);
+        String contadorStr = textView.getText().toString();
+        int contador = Integer.parseInt(contadorStr);
+        contador++;
+        Log.d ("contador", "" +  String.valueOf(contador));
+        textView.setText(String.valueOf(contador));
     }
 
     @Override
