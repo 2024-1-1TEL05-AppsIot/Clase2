@@ -14,6 +14,9 @@ public class MainActivity3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
+        // actividad que recibe el Intent, se indica el resultado de
+        // la operación (RESULT_OK), se manda la data necesaria (putExtra)
+        // y se finaliza con finish()
         Button button = findViewById(R.id.buttonGuardar);
         button.setOnClickListener(view -> {
             EditText editText = findViewById(R.id.editTextApellido);
