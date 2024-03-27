@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -68,7 +69,26 @@ public class MainActivity extends AppCompatActivity {
         } else if (itemId == R.id.add) {
             Toast.makeText(this, "btn add presionado", Toast.LENGTH_SHORT).show();
         } else if (itemId == R.id.notify) {
-            Toast.makeText(this, "btn notify presionado", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "btn notify presionado", Toast.LENGTH_SHORT).show();
+            Log.d ("msgOptAppBar", "App Bar onclik");
+            View menuItemView = findViewById(R.id.notify);
+            PopupMenu popupMenu =  new PopupMenu(this, menuItemView);
+            popupMenu.getMenuInflater().inflate(R.menu.menu_popup, popupMenu.getMenu());
+            popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    if (item.getItemId() == R.id.reply_all) {
+                        Log.d ("msgPopup", "replyAll");
+                        return true;
+                    } else if (item.getItemId() == R.id.forward) {
+                        Log.d ("msgPopup", "forward");
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            });
+            popupMenu.show();
         }
 
         return super.onOptionsItemSelected(item);
